@@ -19,7 +19,7 @@ const Home_Body = ({PopularCollections,BiographyCollections,HorrorCollections,Ro
         !Array.isArray(ScienceFictionsCollections)
       ) 
       {
-        return <div>Loading...</div>;
+        return <div>Loading...<br/>Kindly Wait</div>;
       }
     return (
         <>
