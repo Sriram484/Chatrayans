@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .detcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem;
+   
+  }
+  
+  .detimage {
+    max-width: 30%;
+    margin-top: 4rem;
+  }
+  
+  .detimage img {
+    width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+  }
+  
+  .detcontent {
+    max-width: 40%;
+  }
+  
+  .detbtn {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.9);
+    margin-top: 10%;
+    padding: 1rem;
+  }
+  
+  .detbtnChild {
+    margin-top: 10px;
+  }
+  
+  .detbtn button {
+    text-align: center;
+    padding: 0.5rem;
+    color: whitesmoke;
+  }
+  Link{
+    text-decoration: none;
+  }
+  
+  @media (max-width: 900px) {
+    .detcontainer {
+      margin: 1rem;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .detimage {
+      max-width: 45%; 
+    }
+  
+    .detimage img {
+      width: 100%; 
+      height: auto; 
+      margin: 0;
+    }
+  
+    .detcontent {
+      max-width: 45%; 
+    }
+  
+    .detbtn {
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .detbtn :first-child {
+      margin-top: 0;
+    }
+  
+
+    .detbtn button {
+      width: 100%; 
+      margin-bottom: 0.5rem; 
+    }
+  }
+  

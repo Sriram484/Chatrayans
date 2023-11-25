@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.abtcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem
+}
+
+.abtcontainerimg{
+    max-width: 30%;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.abtcontainerimg img{
+    width: 100%; 
+}
+.abtcontainercontent{
+    max-width: 40%;
+    margin-top: 3rem;
+}
