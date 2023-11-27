@@ -46,7 +46,8 @@ const Auth = ()=> {
         });
       
         if (foundUser) {
-          setAuth({ isAuthenticated: foundUser.auth});
+          setAuth({ isAuthenticated: foundUser.auth, name: foundUser.fullName});
+          console.log(foundUser);
           navigate("/home");
         } else {
           alert("Invalid credentials. Please try again.");
@@ -72,6 +73,8 @@ const Auth = ()=> {
       e.preventDefault();
       console.log('Form Data:', formData);
       addDocument(formData);
+      setAuthMode("signin")
+      navigate("/");
     };
 
   if (authMode === "signin") {
@@ -107,7 +110,7 @@ const Auth = ()=> {
               />
             </div>
             
-              <div to="/home" className="d-grid gap-2 mt-3">
+              <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>

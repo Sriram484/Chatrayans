@@ -5,10 +5,13 @@ import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import Missing from './Missing';
 import { AuthContext } from "./useContext/Admin";
+import { useFirestore } from '../Assets/firebase/useFireStore';
 
 const Detail_Book = ({PopularCollections,BiographyCollections,HorrorCollections,RomanceCollections,ScienceFictionsCollections}) => {
     const { auth } = useContext(AuthContext);
-    console.log(auth);
+    const {addDocument,document,error} = useFirestore(auth.name)
+    console.log(auth.name);
+    // console.log(auth);
 
     const [productData,setProductData] = useState(null);
     const {collection,id} = useParams();
@@ -55,7 +58,11 @@ const Detail_Book = ({PopularCollections,BiographyCollections,HorrorCollections,
         )
     }
     else
-    {
+    {  
+        const handleClick=()=>{
+            addDocument(productData);
+            alert("Book is Successfully added to cart")
+        }
   return (
     
     <>
@@ -65,28 +72,31 @@ const Detail_Book = ({PopularCollections,BiographyCollections,HorrorCollections,
             <div className='detimage'>
                 <img src= {productData.imageurl} alt="" />
             </div>
-            <div className='detcontent'>
-                <h1 style={{marginTop:"0px"}}>
-                    {productData.name}
-                </h1>
-                <h2>
-                    Author:{productData.author}
-                </h2>
-                <h2>
-                    Synopsis
-                </h2>
-                <p style={{color:"black"}}>
-                {productData.description}
-                </p>
-            </div>
-            <div className='detbtn'>
-                <h4 className='detbtnChild'>Buy the eBook</h4>
-                <h5 className='detbtnChild'>List Price: <span style={{textDecoration: "line-through"}}>{productData.price+30}</span></h5>
-                <h5 className='detbtnChild'>Your Price: {productData.price}</h5>
-                <button className='detbtnChild' id='buy'>Buy Now</button>
-                <button className='detbtnChild' id='cart'>Add to Cart</button>
-                {auth.isAuthenticated===true && <button className='detbtnChild' id='buy' style={{backgroundColor:"darkblue",color:"white" }}>Update</button>}
-                {auth.isAuthenticated===true && <button className='detbtnChild' id='cart' style={{backgroundColor:"red",color:"white" }}>Delete</button>}
+            <div className='detComponents'>
+                {/* <div className='detcontent'> */}
+                    <h1 style={{marginTop:"0px"}}>
+                        {productData.name}
+                    </h1>
+                    <h2>
+                        Author: {productData.author}
+                    </h2>
+                    <h2>
+                        Synopsis:
+                    </h2>
+                    <p style={{color:"black"}}>
+                        {productData.description}
+                    </p>
+                {/* </div> */}
+                <div className='detbtn'>
+                    <div className='detprice'>
+                        <h4 className='detbtnChild priceChild'>List Price: <span style={{textDecoration: "line-through"}}>{productData.price+30}</span></h4>
+                        <h4 className='detbtnChild priceChild'>Your Price: {productData.price}</h4>
+                    </div>
+                    <div className='button'>
+                        <button className='detbtnChild' id='buy'>Buy Now</button>
+                        <button className='detbtnChild' id='cart' onClick={()=>handleClick()}>Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
         <Footer/>

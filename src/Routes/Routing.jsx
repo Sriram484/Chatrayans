@@ -7,6 +7,10 @@ import Missing from '../Components/Missing'
 import { productData } from '../Assets/Data/Demo_Db'
 import { Route, Routes } from 'react-router-dom'
 import useFetchCollection from '../Assets/firebase/useFetchCollection'
+import FullList from '../Components/FullList'
+import UpdateList from '../Components/UpdateList'
+import AddList from '../Components/AddList'
+import ViewCarts from '../Components/ViewCarts'
 
 const Routing = () => {
 
@@ -53,7 +57,19 @@ const Routing = () => {
                   ScienceFictionsCollections={ScienceFictionsCollections} 
                 />} 
             />
+            <Route path='/fullList' element={<FullList 
+                   PopularCollections={PopularCollections}
+                   BiographyCollections={BiographyCollections}
+                   HorrorCollections={HorrorCollections}
+                   RomanceCollections={RomanceCollections}
+                   ScienceFictionsCollections={ScienceFictionsCollections}
+                />} 
+            />
+            <Route path='/update/:collection/:id' element={<UpdateList/>}/>
+            <Route path='/fullList/add' element={<AddList/>}/>
+            <Route path='/cart' element={<ViewCarts/>}/>
             <Route path='*' element={<Missing/>} />
+
         </Routes>
     </>
   )

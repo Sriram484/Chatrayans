@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "../Assets/CSS/Navbar.css"
 import { FaBars } from "react-icons/fa";
 import { FaBookOpenReader } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from "./useContext/Admin";
 
 const Navbar = ({data}) => {
+    const { auth } = useContext(AuthContext);
     const [showDropdown, setShowDropdown] = useState(false);
     const toggleDropdown = () => {
       setShowDropdown(!showDropdown);
@@ -23,6 +25,15 @@ const Navbar = ({data}) => {
               </label>
               <nav className='navbar'>
                 <ul >
+                {auth.isAuthenticated===true && 
+                  <li>
+                      <NavLink to="/fullList" style={({isActive})=>{
+                          return isActive ? {color:"#089da1"} : {}
+                          }} >
+                          DashBoard
+                        </NavLink>
+                  </li>
+}
                     <li>
                         <NavLink to="/home" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
@@ -60,7 +71,7 @@ const Navbar = ({data}) => {
                     </li>
                 </ul>
               </nav>
-            </header>
+          </header>
     </>
 
   )

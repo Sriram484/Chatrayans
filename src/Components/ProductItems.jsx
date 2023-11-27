@@ -8,7 +8,7 @@ const ProductItems = (props) => {
           <img className="product--image" src={props.url} alt="product image" />
           </div>
           <h5>{props.name}</h5>
-          <p className="price">{props.price}</p>
+          <p className="price" style={{color:"red",fontSize:"20px",fontWeight:"600"}}>Price: {props.price} Only!!!</p>
           <p style={{color:"black"}}>Author:{props.author}</p>
           <p style={{color:"black"}}>
               {(props.description).length<=60 ? 
@@ -18,6 +18,7 @@ const ProductItems = (props) => {
           <div className="btn">
             <button id="cart">Add to Cart</button>
             <button id="buy">Buy Now</button>
+          
         </div>
         </div>
       );

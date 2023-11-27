@@ -1,4 +1,4 @@
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { useState } from 'react';
 import { db } from './config';
 
@@ -17,5 +17,28 @@ export const useFirestore = (fbcollection) => {
         }
     };
 
-    return { addDocument, document, error };
+    const deleteDocument = async(id)=>{
+        const docRef = doc(db,fbcollection,id);
+        try{
+            await deleteDoc(docRef);
+        }
+        catch(err){
+            setError(err)
+        }
+    }
+    
+    const updateDocument=async(id,document)=>{
+        const docRef = doc(db,fbcollection,id);
+        try{
+            await updateDoc(docRef,{
+                ...document
+            });
+        }
+        catch(err){
+            setError(err)
+        }
+        
+    }
+
+    return { addDocument, deleteDocument,updateDocument,document, error };
 };

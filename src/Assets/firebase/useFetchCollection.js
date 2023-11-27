@@ -20,6 +20,8 @@ const useFetchCollection = (fbCollection) => {
         return () => unsubscribe();
     }, [fbCollection]);
 
+    
+
     return { documents };
 };
 
