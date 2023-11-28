@@ -63,63 +63,6 @@
 Link{
   text-decoration: none;
 }
-
-/* @media (max-width: 900px) {
-  .detcontainer {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-  }
-
-
-
-  .detimage img {
-    width: 100%; 
-    height: auto; 
-    margin: 0;
-  }
-
-  .detComponents {
-    width: 100%; 
-  }
-
-  .detprice {
-    width: max-content;
-  }
-
-  .detcontent {
-    width: 100%;
-  }
-
-  .detbtn button {
-    width: 100%; 
-    margin-bottom: 0.5rem; 
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-
-  .button {
-    width: max-content;
-    font-size: 12px;
-    padding: 0%;
-  }
-
-  .priceChild {
-    font-size: 15px;
-  }
-
-  .detcontent {
-    width: 100%;
-  }
-
-  .detcontent p {
-    width: 100%; 
-    box-sizing: border-box;
-  }
-} */
    
 @media (max-width: 900px) {
   .detcontainer{

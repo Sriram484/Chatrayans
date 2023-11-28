@@ -43,5 +43,21 @@
   }
   
   .dropdown {
-    margin-right: 1rem; /* Adjust margin as needed */
+    margin-right: 1rem;
+  }
+
+  @media (max-width:900px) {
+    .searchBar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .postCard
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .postCard img{
+        width: 400px;
+        height: 500px;
+    }
   }
