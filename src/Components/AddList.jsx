@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useFirestore } from "../Assets/firebase/useFireStore";
 import Navbar from './Navbar';
 import "../Assets/CSS/AddList.css"
-import { useParams } from 'react-router-dom';
-import useFetchCollection from '../Assets/firebase/useFetchCollection';
+
 import { useNavigate } from 'react-router-dom';                          
 
 

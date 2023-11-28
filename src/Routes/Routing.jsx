@@ -4,7 +4,6 @@ import About from "../Components/About"
 import Auth from "../Components/Auth"
 import Detail_Book from '../Components/Detail_Book'
 import Missing from '../Components/Missing'
-import { productData } from '../Assets/Data/Demo_Db'
 import { Route, Routes } from 'react-router-dom'
 import useFetchCollection from '../Assets/firebase/useFetchCollection'
 import FullList from '../Components/FullList'

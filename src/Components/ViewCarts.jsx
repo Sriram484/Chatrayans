@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Post from './Post';
 import Navbar from './Navbar';
-import Missing from './Missing';
 import "../Assets/CSS/FullList.css"
-import { Link } from 'react-router-dom';
 import { AuthContext } from "./useContext/Admin";
 import { useFirestore } from '../Assets/firebase/useFireStore';
 import useFetchCollection from "../Assets/firebase/useFetchCollection"
