@@ -24,21 +24,21 @@
     max-width: 40%;
     margin-top: 3rem;
 }
-@media(max-width:800px) {
-    .abtcontainer{
-        display: flex;
-        width: 70%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: justify;
+
+@media (max-width: 800px) {
+    .abtcontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
     }
-    .abtcontainerimg img{
-        width: 300px;
-        height: 400px;
+    .abtcontainer .abtcontainerimg img {
+      width: 100%; 
+      max-width: 100%; 
+      height: auto; 
     }
-    .abtcontainercontent p{
-        width: 100%;
+    .abtcontainer .abtcontainercontent {
+      width: 100%;
+      max-width: 100%; 
     }
-    
-}
+  }
