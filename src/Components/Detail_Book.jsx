@@ -73,7 +73,7 @@ const Detail_Book = ({PopularCollections,BiographyCollections,HorrorCollections,
                 <img src= {productData.imageurl} alt="" />
             </div>
             <div className='detComponents'>
-                {/* <div className='detcontent'> */}
+                <div className='detcontent'>
                     <h1 style={{marginTop:"0px"}}>
                         {productData.name}
                     </h1>
@@ -86,7 +86,7 @@ const Detail_Book = ({PopularCollections,BiographyCollections,HorrorCollections,
                     <p style={{color:"black"}}>
                         {productData.description}
                     </p>
-                {/* </div> */}
+                </div>
                 <div className='detbtn'>
                     <div className='detprice'>
                         <h4 className='detbtnChild priceChild'>List Price: <span style={{textDecoration: "line-through"}}>{productData.price+30}</span></h4>
