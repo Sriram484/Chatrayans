@@ -29,7 +29,7 @@ const Navbar = ({data}) => {
                   <li>
                       <NavLink to="/fullList" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }} replace>
                           DashBoard
                         </NavLink>
                   </li>
@@ -37,35 +37,35 @@ const Navbar = ({data}) => {
                     <li>
                         <NavLink to="/home" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }}replace >
                           Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/about" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }} replace>
                           About
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/review" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }} replace>
                           Reviews
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/cart" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }} replace >
                           View Cart
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/" style={({isActive})=>{
                           return isActive ? {color:"#089da1"} : {}
-                          }} >
+                          }} replace>
                           Log Out
                         </NavLink>
                     </li>

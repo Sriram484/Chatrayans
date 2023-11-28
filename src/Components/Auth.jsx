@@ -46,7 +46,7 @@ const Auth = ()=> {
         });
       
         if (foundUser) {
-          setAuth({ isAuthenticated: foundUser.auth, name: foundUser.fullName});
+          setAuth({ isAuthenticated: foundUser.auth, name: foundUser.fullName,user:true});
           console.log(foundUser);
           navigate("/home");
         } else {

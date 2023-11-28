@@ -6,6 +6,7 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({
     name:"",
     isAuthenticated: false,
+    user:false
   });
 
   const contextValue = {

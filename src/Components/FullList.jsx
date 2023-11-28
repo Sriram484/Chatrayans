@@ -17,7 +17,7 @@ const FullList = ({PopularCollections,BiographyCollections,HorrorCollections,Rom
     console.log(option);
   };
       
-      const handleInputChange = (event) => {
+  const handleInputChange = (event) => {
     setInputValue(event.target.value);
     console.log(event.target.value);
   };
