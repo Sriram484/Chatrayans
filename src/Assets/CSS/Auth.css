@@ -40,6 +40,9 @@
   p{
     color: whitesmoke;
   }
-  #id{
+  #email{
     text-transform: lowercase;
+  }
+  #email::placeholder{
+    text-transform: capitalize;
   }
