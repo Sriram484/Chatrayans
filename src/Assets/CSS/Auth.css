@@ -40,3 +40,6 @@
   p{
     color: whitesmoke;
   }
+  #id{
+    text-transform: lowercase;
+  }

@@ -95,6 +95,7 @@ const Auth = ()=> {
                 type="email"
                 name="email"
                 className="form-control mt-1"
+                id="email"
                 placeholder="Enter email"
                 onChange={handleRegChange}
               />
@@ -153,6 +154,7 @@ const Auth = ()=> {
             <input
               type="email"
               name="email"
+              id="email"
               className="form-control mt-1"
               placeholder="Email Address"
               onChange={handleFormChange}
